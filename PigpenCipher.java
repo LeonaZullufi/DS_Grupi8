@@ -3,10 +3,11 @@ import java.util.Map;
 
 public class PigpenCipher {
 
-
+    // Krijohet një hartë që lidh shkronjat me simbolin përkatës të Pigpen Cipher
     private static final Map<Character, String> characterMap = new HashMap<>();
 
     static {
+        // Rrjeta e parë (tic-tac-toe) për shkronjat A-I
         characterMap.put('a', "─┘");
         characterMap.put('b', "└─┘");
         characterMap.put('c', "└─");
@@ -17,6 +18,7 @@ public class PigpenCipher {
         characterMap.put('h', "┌─┐");
         characterMap.put('i', "┌─");
 
+        // Rrjeta e dytë me pikë për shkronjat J-R
         characterMap.put('j', "─•┘");
         characterMap.put('k', "└•┘");
         characterMap.put('l', "└•─");
@@ -27,17 +29,20 @@ public class PigpenCipher {
         characterMap.put('q', "┌•┐");
         characterMap.put('r', "┌•─");
 
+        // Rrjeta e tretë në formë X për shkronjat S-V
         characterMap.put('s', "\\/");
         characterMap.put('t', ">");
         characterMap.put('u', "<");
         characterMap.put('v', "/\\");
 
+        // Rrjeta e katërt me pika për shkronjat W-Z
         characterMap.put('w', "\\•/");
         characterMap.put('x', "•>");
         characterMap.put('y', "<•");
         characterMap.put('z', "/•\\");
     }
 
+    //Enkriptimi
     public static String enkriptimi(String mesazhi) {
         StringBuilder mesazhiEnkriptuar = new StringBuilder();
 
@@ -52,6 +57,7 @@ public class PigpenCipher {
         }
         return mesazhiEnkriptuar.toString();
     }
+
 
     public static void main(String[] args) {
         String mesazhi = "HeLLO WORLD";
