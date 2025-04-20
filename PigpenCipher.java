@@ -49,10 +49,13 @@ public class PigpenCipher {
         mesazhi = mesazhi.toLowerCase();
 
         for (char c : mesazhi.toCharArray()) {
+
             if (characterMap.containsKey(c)) {
                 mesazhiEnkriptuar.append(characterMap.get(c)).append(" ");
+            } else if (c == ' '){
+                mesazhiEnkriptuar.append("  ");//dy hapesire ruan hapsiren origjinale
             } else {
-                mesazhiEnkriptuar.append(c);
+                mesazhiEnkriptuar.append(c).append(" ");
             }
         }
         return mesazhiEnkriptuar.toString();
