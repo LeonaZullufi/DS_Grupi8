@@ -45,7 +45,7 @@ public class ScytaleTransposition {
         return mesazhiDekriptuar.toString();
     }
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         ScytaleTransposition scytale=new ScytaleTransposition();
 
         String mesazhi = "HELLOSCYTALECIPHER";
