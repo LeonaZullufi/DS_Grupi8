@@ -68,36 +68,34 @@ public class PigpenCipher {
 
         String mesazhiDekriptuar = dekriptimi(mesazhiEnkriptuar);
         System.out.println("Mesazhi i dekriptuar: " + mesazhiDekriptuar);
-        
+
     }
+    public static String dekriptimi(String mesazhiEnkriptuar) {
+        StringBuilder mesazhiDekriptuar = new StringBuilder();
+
+        // Krijohet një hartë e anasjelltë për dekriptim
+        Map<String, Character> reverseMap = new HashMap<>();
+        for (Map.Entry<Character, String> entry : characterMap.entrySet()) {
+            reverseMap.put(entry.getValue(), entry.getKey());
+        }
+
+        // Ndajmë mesazhin e enkriptuar sipas hapësirave
+        String[] simbolet = mesazhiEnkriptuar.split(" ");
+
+        for (String simbol : simbolet) {
+            if (reverseMap.containsKey(simbol)) {
+                mesazhiDekriptuar.append(reverseMap.get(simbol));
+            } else {
+                mesazhiDekriptuar.append(simbol); // për hapësira ose simbole tjerë
+            }
+        }
+
+        return mesazhiDekriptuar.toString();
+    }
+
 
 }
 
 
 
-
- // DEKRIPTIMI
-
- public static String dekriptimi(String mesazhiEnkriptuar) {
-     StringBuilder mesazhiDekriptuar = new StringBuilder();
-
-     // Krijohet një hartë e anasjelltë për dekriptim
-     Map<String, Character> reverseMap = new HashMap<>();
-     for (Map.Entry<Character, String> entry : characterMap.entrySet()) {
-         reverseMap.put(entry.getValue(), entry.getKey());
-     }
-
-     // Ndajmë mesazhin e enkriptuar sipas hapësirave
-     String[] simbolet = mesazhiEnkriptuar.split(" ");
-
-     for (String simbol : simbolet) {
-         if (reverseMap.containsKey(simbol)) {
-             mesazhiDekriptuar.append(reverseMap.get(simbol));
-         } else {
-             mesazhiDekriptuar.append(simbol); // për hapësira ose simbole tjerë
-         }
-     }
-
-     return mesazhiDekriptuar.toString();
- }
 
