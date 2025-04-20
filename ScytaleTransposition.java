@@ -51,7 +51,7 @@ public class ScytaleTransposition {
         String mesazhi = "HELLOSCYTALECIPHER";
         int celesi = 4;
 
-        String enkriptuar = encrypt(mesazhi, celesi);
+        String enkriptuar = scytale.encrypt(mesazhi, celesi);
         System.out.println("Mesazhi i enkriptuar: " + enkriptuar);
 
         String dekriptuar = scytale.decrypt(enkriptuar, celesi);
