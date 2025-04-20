@@ -54,3 +54,29 @@ Dëshiron të vazhdosh programin:
 ```
 Nëse shtypni P, programi ju çon sërish te zgjedhja e algoritmit. \
 Nëse J, programi përfundon.
+
+
+## Përshkrimi i algoritmit
+Pigpen Cipher (i njohur edhe si Masonic Cipher) është një algoritëm
+kriptografik zëvendësimi gjeometrik që përdor simbole të thjeshta bazuar 
+në pozicione të një rrjete (Grid) për të përfaqësuar shkronjat e alfabetit. 
+Ky algoritem ka qenë i përdorur historikisht nga Masonët dhe është një nga metodat 
+më të njohura vizuale të enkriptimit.\
+Pigpen Cipher është i lehtë për t'u kuptuar, ai nuk ofron siguri reale, 
+pasi struktura e tij është e njohur gjerësisht. Kjo e bën të dobët kundër 
+sulmeve të thjeshta kriptografike, pasi një sulmues mund ta deshifrojë direkt 
+pa pasur nevojë për celës sekret.
+
+Struktura e rrjetave:
+![img_2.png](img_2.png)
+## Shembuj të rezultateve të ekzekutimit
+### Pigpen / Masonic Cipher
+
+#### Shembull 1
+Enkriptimi \
+Plaintext: Masonic
+![img_3.png](img_3.png)
+
+Dekriptimi \
+Ciphertext: •⊐ ─┘ \/ ⊏• ⊡ ┌─ └─ 
+![img_4.png](img_4.png)
