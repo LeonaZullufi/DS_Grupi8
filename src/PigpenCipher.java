@@ -86,10 +86,12 @@ public class PigpenCipher {
         String[] simbolet = mesazhiEnkriptuar.split(" ");
 
         for (String simbol : simbolet) {
-            if (reverseMap.containsKey(simbol)) {
+            if (simbol.isBlank()) {
+                mesazhiDekriptuar.append(" "); // e kthen hapësirën
+            } else if (reverseMap.containsKey(simbol)) {
                 mesazhiDekriptuar.append(reverseMap.get(simbol));
             } else {
-                mesazhiDekriptuar.append(simbol); // për hapësira ose simbole tjerë
+                mesazhiDekriptuar.append(simbol);
             }
         }
 
