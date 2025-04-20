@@ -63,7 +63,7 @@ public class PigpenCipher {
 
 
     public static void main(String[] args) {
-        String mesazhi = "HeLLO WORLD";
+        String mesazhi = "HeLLO WORLd";
         String mesazhiEnkriptuar = enkriptimi(mesazhi);
 
         System.out.println("Mesazhi origjinal: " + mesazhi);
