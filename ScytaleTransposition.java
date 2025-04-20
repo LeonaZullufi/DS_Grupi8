@@ -28,7 +28,8 @@ public class ScytaleTransposition {
 
         for (int kolona = 0; kolona < kolonat; kolona++) {
             for (int rreshti = 0; rreshti < celesi; rreshti++) {
-                if (indeks < gjatesia) {
+                int pozita = rreshti * kolonat + kolona;
+                if (pozita < gjatesia && indeks < gjatesia) {
                     matrica[rreshti][kolona] = mesazhiEnkriptuar.charAt(indeks++);
                 }
             }
@@ -36,9 +37,8 @@ public class ScytaleTransposition {
         StringBuilder mesazhiDekriptuar = new StringBuilder();
         for (int rreshti = 0; rreshti < celesi; rreshti++) {
             for (int kolona = 0; kolona < kolonat; kolona++) {
-                char ch = matrica[rreshti][kolona];
-                if (ch != 0) {
-                    mesazhiDekriptuar.append(ch);
+                if (matrica[rreshti][kolona]!=0) {
+                    mesazhiDekriptuar.append(matrica[rreshti][kolona]);
                 }
             }
         }
