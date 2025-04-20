@@ -65,6 +65,10 @@ public class PigpenCipher {
 
         System.out.println("Mesazhi origjinal: " + mesazhi);
         System.out.println("Mesazhi i enkriptuar: " + mesazhiEnkriptuar);
+
+        String mesazhiDekriptuar = dekriptimi(mesazhiEnkriptuar);
+        System.out.println("Mesazhi i dekriptuar: " + mesazhiDekriptuar);
+        
     }
 
 }
